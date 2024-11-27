@@ -1,0 +1,145 @@
+/* General styling for the librarian dashboard */
+.librarian-dashboard {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Arial", sans-serif;
+    color: #333;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Wrapper for table to add horizontal scrolling on smaller screens */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+/* Table styling */
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+    text-align: left;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+.dashboard-table th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.dashboard-table td {
+    color: #555;
+}
+
+.dashboard-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.dashboard-table tr:hover {
+    background: #e9ecef;
+}
+
+/* No requests message */
+.no-requests {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+    padding: 20px 0;
+}
+
+/* Buttons styling */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.approve-button {
+    background: #28a745;
+    color: white;
+}
+
+.approve-button:hover {
+    background: #218838;
+}
+
+.reject-button {
+    background: #dc3545;
+    color: white;
+}
+
+.reject-button:hover {
+    background: #c82333;
+}
+
+/* Approved status */
+.status-approved {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #28a745;
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .librarian-dashboard {
+        padding: 15px;
+    }
+
+    .dashboard-table th,
+    .dashboard-table td {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

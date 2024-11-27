@@ -1,0 +1,141 @@
+/* General styling for the dashboard */
+.bookholder-dashboard {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Arial", sans-serif;
+    color: #333;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+    text-align: left;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+.dashboard-table th {
+    background: #343a40;
+    color: white;
+    text-transform: uppercase;
+}
+
+.dashboard-table td {
+    color: #555;
+}
+
+.dashboard-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.dashboard-table tr:hover {
+    background: #e9ecef;
+}
+
+/* Buttons styling */
+button {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.return-button {
+    background: #e74c3c;
+    color: white;
+}
+
+.return-button:hover {
+    background: #c0392b;
+}
+
+.issue-button {
+    background: #3498db;
+    color: white;
+}
+
+.issue-button:hover {
+    background: #2980b9;
+}
+
+/* Issue container (input and button) */
+.issue-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.book-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* No users message */
+.no-users {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+    padding: 20px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .bookholder-dashboard {
+        padding: 15px;
+    }
+
+    .dashboard-table th,
+    .dashboard-table td {
+        font-size: 14px;
+    }
+
+    .issue-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
